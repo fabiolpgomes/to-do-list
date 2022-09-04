@@ -1,25 +1,57 @@
-import logo from './logo.svg';
+import React, { useState} from 'react';
+import { v4 as uuidv4} from 'uuid';
+import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 import './App.css';
 
-function App() {
+
+
+const App = () => {
+ const [tasks, setTasks] = useState([
+  {
+    id: '1',
+    title: 'Estudar React',
+    completed: false,
+  },
+  {
+    id:'2',
+    title:'Estudar lógica de programacao',
+    completed: true,
+  },
+  {
+    id:'3',
+    title:'Criar projeto React-treinar',
+    completed: false,
+  },
+  {
+    id:'4',
+    title:'Atualizar CV',
+    completed: false,
+  },{
+    id:'5',
+    title:'Atualizar LinkedId',
+    completed: false,
+  }
+ ]) ;
+ 
+ const handleTaskAddition = (tasktitle)  => {
+ const newTasks = [...tasks, {
+        title: tasktitle,
+        id: uuidv4(),
+        completed: false,
+ }] 
+
+  setTasks(newTasks)
+ }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div className="container">
+          <AddTask handleTaskAddition={handleTaskAddition} />
+          <Tasks tasks={tasks}/>
+        </div>
+    </>
   );
-}
+};
 
 export default App;
