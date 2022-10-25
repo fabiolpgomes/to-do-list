@@ -1,8 +1,4 @@
-# To Do List   
-Rock, paper and scissors, also called in some regions of Brazil as **jokenpô**
-Project built with educational purpose, developed in JavaScript, HTML and CSS.
-
-## Introduction 
+## Introduction - To Do List   
 Project developed in React, using an API, with the option to Delete Tasks and Add New Task, access to Task Detail.
 
 Created to develop learned skills.

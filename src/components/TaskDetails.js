@@ -21,8 +21,8 @@ const Taskdetails = () => {
           <div className="task-details-container">
             <h2>{params.tasktitle}</h2>
             <p>
-            Lorem15jgfjfagjkfajkfjlgfjalfa
-            dggdsjdjSAFDJKDFkjfdkHFDfddDFHdf
+            Study React
+            Everday
             </p>
           </div>
 
